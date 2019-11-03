@@ -7,7 +7,7 @@ namespace erikitofunctions
 {
     public static class TimedFunction
     {
-        [FunctionName("TImedFunction")]
+        [FunctionName("TimedFunction")]
         public static void Run([TimerTrigger("0 */5 * * * *")]TimerInfo myTimer, ILogger log)
         {
             log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
