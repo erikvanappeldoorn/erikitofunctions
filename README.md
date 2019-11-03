@@ -1,0 +1,2 @@
+# erikitofunctions
+Azure function demos
