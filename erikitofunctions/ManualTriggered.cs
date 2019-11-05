@@ -14,7 +14,7 @@ namespace erikitofunctions
         public static CreateGreetingRequest Run(string input, 
                                ILogger log)
         {
-            log.LogInformation($"This is a manually triggered C# function with input {input}");
+            log.LogInformation($"This is a GitHub manually triggered C# function with input {input}");
             return new CreateGreetingRequest { FirstName = input, Number = "1234567890" };
         }
     }
