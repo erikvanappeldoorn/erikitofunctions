@@ -9,9 +9,13 @@ namespace erikitofunctions
     {
         [NoAutomaticTrigger]
         [FunctionName("ManualTriggered")]
-        public static void Run(string input, ILogger log)
+        [StorageAccount("AzureWebJobsStorage")]
+        [return: Queue("greeting-creation-requests")]
+        public static CreateGreetingRequest Run(string input, 
+                               ILogger log)
         {
             log.LogInformation($"This is a manually triggered C# function with input {input}");
+            return new CreateGreetingRequest { FirstName = input, Number = "1234567890" };
         }
     }
 }
