@@ -5,10 +5,10 @@ using Microsoft.Extensions.Logging;
 
 namespace erikitofunctions
 {
-    public static class ManualTriggered
+    public static class ManualTrigger
     {
         [NoAutomaticTrigger]
-        [FunctionName("ManualTriggered")]
+        [FunctionName("ManualTrigger")]
         [StorageAccount("AzureWebJobsStorage")]
         [return: Queue("greeting-creation-requests")]
         public static CreateGreetingRequest Run(string input, 
