@@ -15,7 +15,7 @@ namespace erikitofunctions
         [FunctionName("HttpTriggerPost")]
         [StorageAccount("AzureWebJobsStorage")]
         public static async Task<IActionResult> Run(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "post", Route = null)]HttpRequest req,
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)]HttpRequest req,
             ILogger log,
             [Queue("greeting-creation-requests")]IAsyncCollector<CreateGreetingRequest> outputQueue)
         {
